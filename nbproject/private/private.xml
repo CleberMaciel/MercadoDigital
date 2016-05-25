@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/modelo/Venda.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/DAO/GenericDAO.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/hibernate.cfg.xml</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/DAO/CategoriaDAO.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/modelo/Categoria.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/modelo/Produto.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/test/DAO/CategoriaDAOTeste.java</file>
+            <file>file:/home/cleber/NetBeansProjects/Teste/src/java/modelo/ItemVenda.java</file>
+        </group>
+    </open-files>
+</project-private>
