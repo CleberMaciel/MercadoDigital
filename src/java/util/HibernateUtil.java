@@ -5,6 +5,7 @@
  */
 package util;
 
+import java.sql.DriverManager;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -26,7 +27,8 @@ public class HibernateUtil {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
             Configuration conf = new Configuration().configure();
-
+            //DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            //DriverManager.registerDriver(new org.postgresql.Driver());
             ServiceRegistry registro = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
 
             SessionFactory fabrica = conf.buildSessionFactory(registro);

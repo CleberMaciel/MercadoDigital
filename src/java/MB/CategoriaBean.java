@@ -11,6 +11,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+
 import javax.faces.event.ActionEvent;
 import modelo.Categoria;
 import org.omnifaces.util.Messages;
@@ -47,6 +48,18 @@ public class CategoriaBean implements Serializable {
         categoria = new Categoria();
     }
 
+    @PostConstruct
+    public void listar() {
+        try {
+
+            CategoriaDAO catDAO = new CategoriaDAO();
+            listaCategorias = catDAO.listar();
+
+        } catch (RuntimeException e) {
+            Messages.addGlobalError("Erro ao tentar listar as categoria");
+        }
+    }
+
     public void salvar() {
         try {
             CategoriaDAO catDAO = new CategoriaDAO();
@@ -60,19 +73,6 @@ public class CategoriaBean implements Serializable {
             e.printStackTrace();
         }
     }//fim salvar
-
-    @PostConstruct
-    public void listar() {
-        try {
-
-            CategoriaDAO catDAO = new CategoriaDAO();
-            listaCategorias = catDAO.listar();
-
-        } catch (RuntimeException e) {
-            Messages.addGlobalError("Erro ao tentar listar as categoria");
-            e.printStackTrace();
-        }
-    }
 
     public void excluir(ActionEvent ev) {
         try {
