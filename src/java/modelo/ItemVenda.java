@@ -28,10 +28,10 @@ public class ItemVenda extends GenericDomain {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Usuario usuario;
+    private Venda venda;
 
     @Column(nullable = false, precision = 7, scale = 2)
-    private BigDecimal precoParcial;
+    private double precoParcial;
 
     public short getQuantidade() {
         return quantidade;
@@ -49,19 +49,19 @@ public class ItemVenda extends GenericDomain {
         this.produto = produto;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Venda getVenda() {
+        return venda;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setVenda(Venda venda) {
+        this.venda = venda;
     }
 
-    public BigDecimal getPrecoParcial() {
+    public double getPrecoParcial() {
         return precoParcial;
     }
 
-    public void setPrecoParcial(BigDecimal precoParcial) {
+    public void setPrecoParcial(double precoParcial) {
         this.precoParcial = precoParcial;
     }
 

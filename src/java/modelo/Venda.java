@@ -27,10 +27,34 @@ public class Venda extends GenericDomain {
     private Date horario;
 
     @Column(nullable = false, precision = 7, scale = 2)
-    private BigDecimal precoTotal;
+    private double precoTotal;
 
     @ManyToOne
     @JoinColumn(nullable = false)
     private Usuario usuario;
+
+    public Date getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Date horario) {
+        this.horario = horario;
+    }
+
+    public double getPrecoTotal() {
+        return precoTotal;
+    }
+
+    public void setPrecoTotal(double precoTotal) {
+        this.precoTotal = precoTotal;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
 }

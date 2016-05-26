@@ -9,33 +9,7 @@
     </h:head>
     <p:growl id="mensagem"/>
     <h:body>
-        <h:form id="formVenda">
-            <p:panel header="Produtos">
-                <p:dataTable id="tabela" emptyMessage="Lista vazia" paginator="true" value="#{vendaBean.listaProdutos}" var="listaProdutos" rows="5">
-
-                    <p:column headerText="Nome Produto">
-                        <h:outputText value="#{listaProdutos.produtoNome}"/>
-                    </p:column>
-
-                    <p:column headerText="Categoria">
-                        <h:outputText value="#{listaProdutos.produtoCategoria.nomeCategoria}"></h:outputText>
-                    </p:column>
-
-                    <p:column headerText="Cor">
-                        <h:outputText value="#{listaProdutos.produtoCor}"></h:outputText>
-                    </p:column>
-
-                    <p:column headerText="Descrição">
-                        <h:outputText value="#{listaProdutos.produtoDescricao}"></h:outputText>
-                    </p:column>
-
-                    <p:column headerText="Opções">
-                        <p:commandButton icon="ui-icon-plus" actionListener="#{vendaBean.adicionar}" update="formVenda:tabelaCarrinho :formVenda:final">
-                            <f:attribute name="produtoSelecionado" value="#{listaProdutos}"></f:attribute>
-                        </p:commandButton>
-                    </p:column>
-                </p:dataTable>
-            </p:panel>
+        <h:form id="formCarrinho">
             <p:panel header="Carrinho de compras">
                 <p:dataTable id="tabelaCarrinho" emptyMessage="Lista vazia" paginator="true" value="#{vendaBean.itensVenda}" var="itemVenda" rows="5">
 
@@ -83,6 +57,7 @@
                 </h:panelGrid>
             </p:panel>
         </h:form>
+
 
     </h:body>
 </html>

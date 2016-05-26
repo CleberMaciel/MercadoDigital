@@ -22,6 +22,6 @@
         <mapping class="modelo.Produto"/>
         <mapping class="modelo.Usuario"/>
         <mapping class="modelo.Venda"/>
-        
+        <mapping class="modelo.ItemVenda"/>
     </session-factory>
 </hibernate-configuration>

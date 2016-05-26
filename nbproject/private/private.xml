@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/cleber/NetBeansProjects/MercadoDigital/src/java/DAO/GenericDAO.java</file>
-            <file>file:/home/cleber/NetBeansProjects/MercadoDigital/web/index.xhtml</file>
-            <file>file:/home/cleber/NetBeansProjects/MercadoDigital/src/java/MB/CategoriaBean.java</file>
-            <file>file:/home/cleber/NetBeansProjects/MercadoDigital/web/Produtos.xhtml</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/web/Produtos.xhtml</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/src/java/modelo/Categoria.java</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/src/java/MB/ProdutoBean.java</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/web/index.xhtml</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/src/java/modelo/GenericDomain.java</file>
+            <file>file:/home/cleber/NetBeansProjects/MercadoDigital1/src/java/modelo/Produto.java</file>
         </group>
     </open-files>
 </project-private>
