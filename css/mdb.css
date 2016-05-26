@@ -3213,12 +3213,12 @@ button.btn-floating {
 }
 
 .btn-primary {
-    background: #4285F4;
+    background: #DC9E1A;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-    background-color: #5a95f5 !important;
+    background-color: #DC9E1A !important;
     color: #fff;
 }
 
