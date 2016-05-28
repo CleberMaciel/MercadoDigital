@@ -40,7 +40,7 @@ public class AutenticacaoBean implements Serializable {
     }
 
     public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+        this.usuario =usuario;
     }
 
     @PostConstruct
