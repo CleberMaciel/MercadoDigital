@@ -10,8 +10,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 import javax.faces.event.ActionEvent;
 import modelo.ItemVenda;
 import modelo.Produto;
@@ -24,7 +24,7 @@ import org.omnifaces.util.Messages;
  */
 @SuppressWarnings("serial")
 @ManagedBean
-@ViewScoped
+@ApplicationScoped
 public class VendaBean implements Serializable {
 
     private Venda venda;
@@ -93,10 +93,12 @@ public class VendaBean implements Serializable {
             iv.setProduto(p);
             iv.setQuantidade(new Short("1"));
             itensVenda.add(iv);
+            Messages.addGlobalInfo("Produto Adicionado ao carrinho de compras");
         } else {
             ItemVenda iv = itensVenda.get(encontrou);
             iv.setQuantidade(new Short(iv.getQuantidade() + 1 + ""));
             iv.setPrecoParcial(p.getValor() * iv.getQuantidade());
+            Messages.addGlobalInfo("Produto Adicionado ao carrinho de compras");
         }
 
         calcular();
@@ -125,6 +127,19 @@ public class VendaBean implements Serializable {
             ItemVenda iv = itensVenda.get(pos);
             double total = venda.getPrecoTotal() + iv.getPrecoParcial();
             venda.setPrecoTotal(total);
+        }
+    }
+
+    public void salvar() {
+        try {
+            
+            if(venda.getPrecoTotal() == 0){
+                Messages.addGlobalError("Carrinho vazio!");
+                return;
+            }
+
+        } catch (RuntimeException e) {
+            
         }
     }
 

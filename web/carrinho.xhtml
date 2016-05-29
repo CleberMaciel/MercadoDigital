@@ -43,7 +43,7 @@
                     </p:column>
 
                     <p:column headerText="Opções">
-                        <p:commandButton icon="ui-icon-minus" actionListener="#{vendaBean.remover}" update=":formVenda:tabelaCarrinho formVenda:final">
+                        <p:commandButton icon="ui-icon-minus" actionListener="#{vendaBean.remover}" update=":formCarrinho:tabelaCarrinho">
                             <f:attribute name="itemSelecionado" value="#{itemVenda}"></f:attribute>
                         </p:commandButton>
                     </p:column>
