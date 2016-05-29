@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mercado Digital - Gerenciar Produtos</title>
+        <title>Mercado Digital - Adicionar Produtos</title>
 
         <!-- Material Design Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,60 +57,71 @@
             <!-- Page Header -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header text-center">Gerenciar Produtos</h1>
-                    <p class="text-center">Aqui você encontra as opções para gerenciamento dos produtos.</p>
+                    <h1 class="page-header text-center">Adicionar Produtos</h1>
+                    <p class="text-center">Aqui você, administrador, poderá cadastrar novos produtos no sistema.</p>
                 </div>
             </div>
 
             <div class="row">
 
-                <div class="col-md-4">
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            <h3 style="font-size: 25px;font-weight: 500;">Adicionar Produtos</h3>
-                            <p>Aqui você, administrador, poderá adicionar produtos ao sistema.</p>
-                        </div>
-                        <div class="card-action">
-                            <div class="row">
-                                <a href="gerenciar-produtos-adicionar-produtos.html">
-                                    <button type="button" class="btn btn-info waves-effect waves-light">Adicionar Produtos</button>
-                                </a>
+                <div class="col-md-12">
+                    <form>
+                        <div class="col-md-6">
+                            <div class="md-form form-group">
+                                <input type="text" id="form91" class="form-control validate ">
+                                <label for="form91" >Nome</label>
+                            </div>
+
+                            <div class="md-form form-group">
+                                <input type="text" id="form92" class="form-control validate ">
+                                <label for="form92" >Cor</label>
+                            </div>
+
+                            <div class="md-form form-group">
+                                <input type="text" id="form93" class="form-control validate ">
+                                <label for="form93" >Quantidade em Estoque</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            <h3 style="font-size: 25px;font-weight: 500;">Adicionar Categorias</h3>
-                            <p>Aqui você, administrador, poderá adicionar categorias aos produtos.</p>
-                        </div>
-                        <div class="card-action">
-                            <div class="row">
-                                <a href="gerenciar-produtos-adicionar-categorias.html">
-                                    <button type="button" class="btn btn-info waves-effect waves-light">Adicionar Categorias</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card hoverable">
-                        <div class="card-content">
-                            <h3 style="font-size: 25px;font-weight: 500;">Voltar para Área Restrita</h3>
-                            <p>Aqui você, administrador, retornará para a página principal da Área Restrita</p>
-                        </div>
-                        <div class="card-action">
-                            <div class="row">
-                                <a href="area-restrita.html">
-                                    <button type="button" class="btn btn-info waves-effect waves-light">Voltar para Área Restrita</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <div class="col-md-6">
+
+                            <select class="mdb-select" style="margin-top: 40px;">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <br/>
+                            <label>Categoria</label>
 
 
+                            <div class="md-form form-group">
+                                <input type="text" id="form95" class="form-control validate ">
+                                <label for="form95" >Descrição</label>
+                            </div>
+                            <div class="md-form form-group">
+                                <input type="text" id="form96" class="form-control validate ">
+                                <label for="form96" >Valor</label>
+                            </div>
+                        </div>
+                        <div class="md-form form-group">
+                            <a href="" class="btn btn-primary btn-lg">Cadastrar Produto</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header text-center">Listagem de Produtos</h1>
+                    <p class="text-center">Aqui você, administrador, poderá verificar quais são os produtos cadastrados no sistema.</p>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <p>Neste lugar irá uma tabela mostrando os produtos cadastrados nos sistema. A Interface dessa tabela pode ser igual ao que o Cleber tá fazendo.</p>
+                </div>
             </div>
             <hr>
         </div>
@@ -133,11 +144,18 @@
         <!-- JQuery -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
+
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
         <!-- Material Design Bootstrap -->
         <script type="text/javascript" src="js/mdb.js"></script>
+
+        <script>
+                       $(document).ready(function () {
+                            $('.mdb-select').material_select();
+                        });
+        </script>
 
 
     </body>
