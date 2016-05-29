@@ -20,7 +20,7 @@ public class VendaDAO extends GenericDAO<Venda> {
 
     public void salvar(Venda venda, List<ItemVenda> itensVenda) {
         Session sessao = HibernateUtil.getSessionFactory().openSession();
-        Transaction transacao = null;
+        Transaction transacao =null;
 
         try {
             transacao = sessao.beginTransaction();
