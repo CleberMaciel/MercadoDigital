@@ -21,7 +21,7 @@ public class Usuario extends GenericDomain {
     @Column(length = 50, nullable = false)
     private String senha;
     @Column(nullable = false)
-    private Character tipo;
+    private boolean tipo;
 
     public String getLogin() {
         return login;
@@ -39,11 +39,11 @@ public class Usuario extends GenericDomain {
         this.senha = senha;
     }
 
-    public Character getTipo() {
+    public boolean getTipo() {
         return tipo;
     }
 
-    public void setTipo(Character tipo) {
+    public void setTipo(boolean tipo) {
         this.tipo = tipo;
     }
 

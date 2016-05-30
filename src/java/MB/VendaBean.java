@@ -6,6 +6,7 @@
 package MB;
 
 import DAO.ProdutoDAO;
+import DAO.VendaDAO;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +69,7 @@ public class VendaBean implements Serializable {
 
             itensVenda = new ArrayList<>();
         } catch (RuntimeException e) {
-            Messages.addFlashGlobalError("Erro ao listar o produto");
+            Messages.addGlobalError("Erro ao listar o produto");
         }
     }//fim do listar
 
@@ -132,14 +133,16 @@ public class VendaBean implements Serializable {
 
     public void salvar() {
         try {
-            
-            if(venda.getPrecoTotal() == 0){
+
+            if (venda.getPrecoTotal() == 0) {
                 Messages.addGlobalError("Carrinho vazio!");
                 return;
             }
+            VendaDAO vendaDAO = new VendaDAO();
+            vendaDAO.salvar(venda, itensVenda);
 
         } catch (RuntimeException e) {
-            
+
         }
     }
 

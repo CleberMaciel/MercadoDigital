@@ -53,7 +53,7 @@
                 <h:panelGrid columns="3" id="final">
                     <h:outputLabel value="Total: R$ "></h:outputLabel>
                     <h:outputText value="#{vendaBean.venda.precoTotal}"></h:outputText>
-                    <p:commandButton value="Finalizar"></p:commandButton>
+                    <p:commandButton value="Finalizar" actionListener="#{vendaBean.salvar()}" update=":mensagem"></p:commandButton>
                 </h:panelGrid>
             </p:panel>
         </h:form>
