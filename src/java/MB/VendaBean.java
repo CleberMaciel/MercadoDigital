@@ -139,6 +139,8 @@ public class VendaBean implements Serializable {
                 return;
             }
             VendaDAO vendaDAO = new VendaDAO();
+            ProdutoDAO pDAO = new ProdutoDAO();
+            
             vendaDAO.salvar(venda, itensVenda);
 
         } catch (RuntimeException e) {

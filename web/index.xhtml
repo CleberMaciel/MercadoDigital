@@ -5,42 +5,43 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
-        <title>Mercado Digital </title>
+        <title>Autenticação</title>
     </h:head>
-    <p:growl id="mensagem"/>
     <h:body>
-        <h:form id="formVenda">
-            <p:panel header="Produtos">
-                <p:dataTable id="tabela" emptyMessage="Lista vazia" paginator="true" value="#{vendaBean.listaProdutos}" var="listaProdutos" rows="5">
+        <p:growl id="mensagem"/>
+        <p:panel>
+            <h:form> 
+                <h:panelGrid columns="2" >
+                    <p:outputLabel for="login" value="Login: " rendered="true" />
+                    <p:inputText id="login" value="#{autenticacaoBean.usuario.login}"/>
+                    <p:outputLabel for="senha" value="senha : " />
+                    <p:password id="senha" rendered="true" value="#{autenticacaoBean.usuario.senha}" />
+                </h:panelGrid>
+                <p:commandButton value="Entrar" actionListener="#{autenticacaoBean.autenticar()}" update=":mensagem"></p:commandButton>
 
-                    <p:column headerText="Nome Produto">
-                        <h:outputText value="#{listaProdutos.produtoNome}"/>
-                    </p:column>
+                <p:commandButton value="Novo" actionListener="#{usuarioMB.novo()}" update=":formD:painel" oncomplete="PF('dlgProdutos').show();"></p:commandButton>
+            </h:form>
 
-                    <p:column headerText="Categoria">
-                        <h:outputText value="#{listaProdutos.produtoCategoria.nomeCategoria}"></h:outputText>
-                    </p:column>
+            <p:dialog header="Cadastro de usuario" widgetVar="dlgProdutos" draggable="false" resizable="false" modal="true" closable="false">
+                <h:form id="formD">
+                    <h:panelGrid columns="2" id="painel">
+                        <p:outputLabel value="Login do usuario: "></p:outputLabel>
+                        <p:inputText value="#{usuarioMB.usuario.login}"></p:inputText>
 
-                    <p:column headerText="Cor">
-                        <h:outputText value="#{listaProdutos.produtoCor}"></h:outputText>
-                    </p:column>
 
-                    <p:column headerText="Descrição">
-                        <h:outputText value="#{listaProdutos.produtoDescricao}"></h:outputText>
-                    </p:column>
+                        <p:outputLabel value="Senha "></p:outputLabel>
+                        <p:password value="#{usuarioMB.usuario.senha}"></p:password>
 
-                    <p:column headerText="Opções">
-                        <p:commandButton icon="ui-icon-plus" actionListener="#{vendaBean.adicionar}" update=":mensagem :formVenda:tabela">
-                            <f:attribute name="produtoSelecionado" value="#{listaProdutos}"></f:attribute>
-                        </p:commandButton>
-                    </p:column>
-                </p:dataTable>
-                <p:panel>
-                     <h:link outcome="carrinho" value="Carrinho de compras"></h:link>
-                </p:panel>
-            </p:panel>
-        </h:form>
 
+                        <h:panelGrid columns="2">
+                            <p:commandButton value="Salvar" actionListener="#{usuarioMB.salvar()}" update=":mensagem"></p:commandButton>
+                            <p:commandButton value="Fechar" oncomplete="PF('dlgProdutos').hide();"></p:commandButton>
+
+                        </h:panelGrid>
+                    </h:panelGrid>
+                </h:form>
+            </p:dialog>
+        </p:panel>
     </h:body>
 </html>
 

@@ -57,7 +57,7 @@ public class AutenticacaoBean implements Serializable {
                 return;
             }
 
-            Faces.redirect("./faces/index.xhtml");
+            Faces.redirect("./faces/loja.xhtml");
 
         } catch (IOException e) {
             Messages.addGlobalError(e.getMessage());
