@@ -13,6 +13,7 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 import modelo.ItemVenda;
 import modelo.Produto;
@@ -25,7 +26,7 @@ import org.omnifaces.util.Messages;
  */
 @SuppressWarnings("serial")
 @ManagedBean
-@ApplicationScoped
+@SessionScoped
 public class VendaBean implements Serializable {
 
     private Venda venda;
