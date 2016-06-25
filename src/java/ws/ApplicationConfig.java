@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nota_fiscal.service;
+package ws;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
  *
- * @author Matheus
+ * @author zod
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -29,11 +29,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(nota_fiscal.service.CategoriaFacadeREST.class);
-        resources.add(nota_fiscal.service.ItemvendaFacadeREST.class);
-        resources.add(nota_fiscal.service.ProdutoFacadeREST.class);
-        resources.add(nota_fiscal.service.UsuarioFacadeREST.class);
-        resources.add(nota_fiscal.service.VendaFacadeREST.class);
+        resources.add(ws.NotaFiscal.class);
     }
     
 }

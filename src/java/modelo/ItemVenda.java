@@ -33,6 +33,9 @@ public class ItemVenda extends GenericDomain {
     @Column(nullable = false, precision = 7, scale = 2)
     private double precoParcial;
 
+    
+    
+    
     public short getQuantidade() {
         return quantidade;
     }

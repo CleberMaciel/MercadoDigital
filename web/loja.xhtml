@@ -30,7 +30,7 @@
                     </p:column>
 
                     <p:column headerText="Opções">
-                        <p:commandButton value="Adicionar ao carrinho" actionListener="#{vendaBean.adicionar}" update=":mensagem :formVenda:tabela">
+                        <p:commandButton icon="ui-icon-plus" actionListener="#{vendaBean.adicionar}" update=":mensagem :formVenda:tabela">
                             <f:attribute name="produtoSelecionado" value="#{listaProdutos}"></f:attribute>
                         </p:commandButton>
                     </p:column>
